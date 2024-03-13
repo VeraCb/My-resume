@@ -1,0 +1,212 @@
+:root{
+  /* ==============colors ================*/
+  --hue: 255;
+  --first-color: hsl(var(--hue), 90%, 60%);
+  --first-color-alt: hsl(var(--hue), 82%, 56%);
+  --first-color-light: hsl(var(--hue), 40%, 80%);
+  --title-color: hsl(var(--hue), 24%, 16%);
+  --text-color: hsl(var(--hue), 8%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 60%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(0, 0%, 100%);
+  --shadow-color: hsl(var(--hue), 90%, 30%, .1);
+
+  /* ============fonts and typograpfhy============== */
+  /* 0.5 rem = 8px & 1 rem = 16px*/
+  --body-font:  "Syne", sans-serif;
+  --biggest-font-sise: 2rem;
+  --h1-font-sise: 1.5rem;
+  --h2-font-sise: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /* ============= font weight ================ */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*=============== z-index ==============*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* ======== responsive typography ========== */
+@media screen and (min-width: 1158px) {
+  :root {
+  --biggest-font-sise: 4.5rem;
+  --h1-font-sise: 2.25rem;
+  --h2-font-sise: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1.225rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+  }
+}
+
+/* ============ BASE ============= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight:  var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==============REUSABLE CLASSES=========== */
+.container{
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid{
+display: grid;
+gap: 1.5rem;
+}
+
+.section{
+  padding-block: 5rem 1rem;
+}
+
+.section-title{
+  font-size: var(--h1-font-sise);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main {
+  overflow: hidden;
+}
+
+
+/* ============= HEADER & NAV ================= */
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--first-colcor);
+  z-index: var(--z-fixed);
+  transition: background-color .4s, box-shadow .4s;
+
+}
+
+.nav{
+  position: relative;
+  height: 3.5rem;
+  /* height: var(--header-height); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-logo{
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+
+}
+
+.nav-toggle,
+.nav-close{
+display: inline-flex;
+font-size: 1.25rem;
+cursor: pointer;
+
+}
+
+.nav-toggle{
+  color: var(--white-color);
+  transition: color .4s;
+
+}
+
+.nav-close{
+  color: var(--title-color);
+
+}
+
+/* Navigation for mobile divices */
+@media screen and (max-width: 1150px) {
+  .nav-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    width: 100%;
+    box-shadow: 0 12px 24px var(--shadow-color);
+    padding-block: 5rem 4rem;
+    transition: top .4s;
+
+  }
+
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.nav-link{
+  color: var(--title-color);
+  font-size: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav-link:hover{
+  color: var(--first-color);
+
+}
+
+.nav-close{
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+}
