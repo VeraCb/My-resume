@@ -20,3 +20,12 @@ modalClose.forEach((modalClose) => {
     })
   })
 })
+
+// ============ SWIPER TESTIMONIAL ===============
+const swiperTestimonial = new Swiper('.swiper', {
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+})
