@@ -279,7 +279,7 @@ background-color: var(--body-color);
   border-radius: 3px;
 }
 
-.contact-botton:hover{
+.contact-button:hover{
   background-color: var(--first-color-alt);
   box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, .3);
 }
@@ -398,4 +398,148 @@ background-color: var(--body-color);
   justify-content: center;
   align-items: center;
   gap: 2rem 1.5rem; */
+}
+
+/* ============== SERVICES ============ */
+.services-container{
+  row-gap: 2rem;
+
+}
+
+.services-card{
+  background-color: var(--container-color);
+  padding: 3.5rem 1.5rem;
+  box-shadow: 0 12px 24px var(--shadow-color) ;
+  text-align: center;
+  transition: background-color .4s;
+}
+
+.service-icon{
+  display: inline-block;
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+}
+
+.services-title{
+  font-size: var(--h2-font-sise);
+  margin-bottom: 1rem;
+}
+
+.services-description{
+  margin-bottom: 3rem;
+
+}
+
+.services-button{
+  cursor: pointer;
+}
+
+.services-modal{
+  position: fixed;
+  inset: 0;
+  background-color: hsl(var(--hue), 90%, 30%, .3);
+  backdrop-filter:  blur(24px);
+  -webkit-backdrop-filter: blur(24px);   /*for safari*/
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: var(--z-modal);
+  transition: opacity .9s, visibility .4s;
+}
+
+.services-modal-content{
+  max-height: 420px;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 1.5rem;
+  border-bottom: 6px solid var(--first-color);
+  overflow: auto;
+}
+
+.services-modal-content::-webkit-scrollbar{
+  width:  .6rem;
+}
+
+.services-modal-content::-webkit-scrollbar-thumb{
+  background-color: var(--text-color-light);
+}
+
+.services-modal-title{
+  font-size: var(--h2-font-sise);
+  margin-bottom: 2.5rem;
+
+}
+
+.services-modal-list{
+  margin-left: 1rem;
+}
+
+.services-modal-item{
+  text-align: initial;
+  list-style:square;
+}
+
+.services-modal-item::marker{
+  color: var(--first-color);
+
+}
+
+.services-modal-close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+/* ======= active modal  ================= */
+.active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========== WORK =============== */
+.work-container{
+  row-gap: 2rem;
+
+}
+
+.work-link{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.work-img{
+  filter: grayscale(1);
+  transition: filter .5s, transferm .5s;
+}
+
+.work-icon{
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 2rem;
+  color: var(--first-color);
+  transition: transform .4s;
+}
+
+.work-link:hover .work-img{
+transform: scale(1.1);
+transition: all .5s ease-in-out;
+filter: none;
+}
+
+.work-link:hover .work-icon{
+  transform: translate(.5rem, -.5rem) rotate(-30deg);
+}
+
+.work-title{
+  font-size: var(--h2-font-sise);
+  margin-bottom: 0.25rem;
 }
