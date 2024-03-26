@@ -590,3 +590,15 @@ filter: none;
 .testimonial-card:hover .testimonial-img{
   filter: none;
 }
+/* swiper class */
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: -1rem;
+}
+.swiper-pagination-bullet{
+  background-color: var(--first-color-light);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+}

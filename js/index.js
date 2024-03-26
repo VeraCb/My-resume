@@ -22,10 +22,14 @@ modalClose.forEach((modalClose) => {
 })
 
 // ============ SWIPER TESTIMONIAL ===============
-const swiperTestimonial = new Swiper('.swiper', {
+const swiperTestimonial = new Swiper('.testimonial-swiper', {
   loop: true,
+  spaceBetween: 32,
+  grabCursor: true, 
 
   pagination: {
     el: '.swiper-pagination',
+    dynamicBullets:true,
+    clickable: true,
   },
 })
