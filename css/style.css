@@ -269,7 +269,7 @@ background-color: var(--body-color);
 }
 
 /* ======== CONTACT BUTTON ========= */
-.contact-button{
+.button{
   display: inline-block;
   background-color: var(--first-color);
   color: var(--white-color);
@@ -279,7 +279,7 @@ background-color: var(--body-color);
   border-radius: 3px;
 }
 
-.contact-button:hover{
+.button:hover{
   background-color: var(--first-color-alt);
   box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, .3);
 }
@@ -602,3 +602,12 @@ filter: none;
 .swiper-pagination-bullet-active{
   background-color: var(--first-color);
 }
+
+/* ============ CONTACT ================ */
+.contact-container{
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

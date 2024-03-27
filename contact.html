@@ -54,7 +54,43 @@
           </div>
         </nav>
     </header>
+    <!-- ============ MAIN =========== -->
+    <main class="main"></main>
+
+    <!-- =============== CONTACT ================ -->
+    <section class="contact section">
+        
+            <h2 class="section-title">
+                Let's Talk <br> About Your Project
+            </h2>
     
+           <div class="contact-page container grid">
+            <form action="" class="contact-form grid" id="contact-form">
+                <div class="contact-group grid">
+                    <div class="contact-box">
+                        <input type="text" name="user_name" id="name" required placeholder="Write your name" class="contact-input">
+                        <label for="name" class="contact-label">First Name</label>
+                    </div>
+
+                    <div class="contact-box">
+                        <input type="text" name="user_email" id="email" required placeholder="Write your email" class="contact-input">
+                        <label for="email" class="contact-label">Email Address</label>
+                    </div>
+                </div>
+
+                <div class="contact-box contact-area">
+                    <textarea name="user_message" id="message" required placeholder="write your message" class="contact-input"></textarea>
+                    <label for="message" class="contact-label">Message</label>
+                </div>
+
+                <p class="contact-message" id="contact-message">Message</p>
+                <button type="submit" class="contact-send button">Send Message</button>
+            </form>
+           </div>
+        
+    </section>
+
+    <!-- ========== JS =============== -->
    <script src="./js/modal.js"></script> 
 </body>
 </html>
