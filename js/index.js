@@ -33,3 +33,12 @@ const swiperTestimonial = new Swiper('.testimonial-swiper', {
     clickable: true,
   },
 })
+
+/* ============ SHOW SCROLL UP ================== */
+const scrollUP = () =>{
+   const scrollUP = document.getElementById('scroll-up')
+  // when the scroll is higher than 350 wiewport height, add the show-scroll class to the tag with the scrollup class
+  this.scrollY >= 350 ? scrollUP.classList.add('show-scroll')
+                                          : scrollUP.classList.remove('show-scroll')
+};
+window.addEventListener('scroll', scrollUP);
