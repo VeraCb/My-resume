@@ -42,3 +42,4 @@ const scrollUP = () =>{
                                           : scrollUP.classList.remove('show-scroll')
 };
 window.addEventListener('scroll', scrollUP);
+
