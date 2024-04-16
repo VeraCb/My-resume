@@ -70,6 +70,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background-color .4s;
+  position: relative;
 }
 
 input,
@@ -391,6 +392,9 @@ background-color: var(--body-color);
 }
 
 /* ============= ABOUT =============== */
+.about-p{
+  padding-bottom: 250px;
+}
 .about-page{
   padding-bottom: 4rem;
 }
@@ -548,6 +552,9 @@ background-color: var(--body-color);
 }
 
 /* =========== WORK =============== */
+.work-p{
+  padding-bottom: 320px;
+}
 .work-container{
   row-gap: 2rem;
 
@@ -655,7 +662,9 @@ filter: none;
   flex-direction: column;
   align-items: center;
 }
-
+.contact{
+  padding-bottom: 300px;
+}
 /* .contact-button{
   justify-self: center;
 } */
@@ -780,14 +789,7 @@ justify-content: center;
   column-gap: 1rem;
 }
 
-.footer-social-link{
-  font-size: 1.5rem;
-  transition: transform .4s;
-}
 
-.footer-social-link:hover{
-  transform: translateY(-.25rem);
-}
 
 .footer-copy{
   font-size: var(--small-font-size);
@@ -1105,3 +1107,91 @@ justify-content: center;
   }
  
 }
+/* footer */
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.ull {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ull a{
+  color: rgb(47, 30, 83);
+}
+
+.socials {
+  gap: 20px;
+}
+
+
+
+.links {
+  gap: 10px;
+}
+
+.legal {
+  font-size: 12px;
+  margin: 0;
+}
+
+.svg-ftr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(3) scaleX(2.25);
+  transform-origin: bottom;
+  box-sizing: border-box;
+  display: block;
+  pointer-events: none;
+ 
+}
+
+.anim-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 370px;
+ 
+}
+
+.ftr-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+  padding-bottom: 80px;
+  padding-left: 60px;
+  width: 100%;
+  color: #d6dfed;
+}
+.footer-social-link{
+  font-size: 1.7rem;
+  transition: transform .4s;
+  color: rgb(47, 30, 83);
+}
+
+
+
+@media (width > 420px) {
+  .ftr-section {
+    align-items: center;
+    padding-left: 0;
+    gap: 20px;
+  }
+
+  .links {
+    gap: 20px;
+  }
+}
+
