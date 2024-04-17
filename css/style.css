@@ -921,7 +921,7 @@ justify-content: center;
 }
 /* ===== FOR LARGE DIVICES ====== */
 @media screen and (min-width: 1150px){
-  
+ 
   .container{
     margin-inline: auto;
   }
@@ -1108,6 +1108,7 @@ justify-content: center;
   .home-rectangle{
     width: 33vw;
   }
+
 }
 /* ===== FOR 2K RESOLUTION(2048 x 1152, 2048 x 1536) ====== */
 @media screen and (min-width: 2048px) {
@@ -1214,4 +1215,10 @@ justify-content: center;
   }
 
 }
+@media (width > 1150px) {
+  .background{
+    margin-top: 0;
+  }
+  
 
+}
