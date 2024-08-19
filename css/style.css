@@ -450,8 +450,10 @@ background-color: var(--body-color);
 }
 
 /* ============== SERVICES ============ */
+
 .services-container{
   row-gap: 2rem;
+ 
 
 }
 
@@ -601,6 +603,9 @@ filter: none;
 }
 
 /* ============ TESTIMONIAL ================= */
+.testimonial{
+  display: none;
+}
 .testimonial-container{
   position: relative;
 }
@@ -1134,6 +1139,9 @@ justify-content: center;
 }
 .ull a{
   color: rgb(47, 30, 83);
+}
+.phone-link{
+  text-decoration: underline;
 }
 
 .socials {
