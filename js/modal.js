@@ -40,3 +40,9 @@ function updateName() {
 }
     updateName(); */
 
+// download my CV
+// document.getElementById('downloadLink').addEventListener('click', function() {
+//   var pdf = new jsPDF();
+//   pdf.text(cvContent, 10, 10);
+//   pdf.save("CV.pdf");
+// });
